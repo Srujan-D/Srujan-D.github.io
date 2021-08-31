@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal | Academic</title>
+    <link>https://Srujan-D.github.io/tag/personal/</link>
+      <atom:link href="https://Srujan-D.github.io/tag/personal/index.xml" rel="self" type="application/rss+xml" />
+    <description>Personal</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Srujan Deolasee</copyright><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png</url>
+      <title>Personal</title>
+      <link>https://Srujan-D.github.io/tag/personal/</link>
+    </image>
+    
+    <item>
+      <title>Path Planner and Autonomous Controller for a Robot</title>
+      <link>https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/</guid>
+      <description>&lt;p&gt;Created an autonomous PID controller and a Path Planner using Randomly Exploring Random Tree (RRT) for a Trotbot robot. Trotbot is created by the Electronics and Robotics Club at BITS Goa. It is based on an Omnibase package developed by them. The Trotbot planned it&amp;rsquo;s way through a series of static obstacles, and traversed the resultant path using the PID controller code I wrote. I have used ROS and Python for completing the project. I simulated my code on Gazebo.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

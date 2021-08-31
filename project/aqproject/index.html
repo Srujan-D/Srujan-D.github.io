@@ -268,6 +268,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JP8D910Y7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-JP8D910Y7W', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -287,8 +326,8 @@
     <link rel="manifest" href="/manifest.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_180x180_fill_lanczos_center_3.png" />
 
   <link rel="canonical" href="https://Srujan-D.github.io/project/aqproject/" />
 
@@ -301,15 +340,16 @@
   
   
     
+    
   
   
-  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://Srujan-D.github.io/project/aqproject/" />
   <meta property="og:title" content="Autonomous Quadcopter | Academic" />
-  <meta property="og:description" content="Building a level 5 autonomous quadcopter as part of the Team Robocon." /><meta property="og:image" content="https://Srujan-D.github.io/project/aqproject/featured.jpg" />
-    <meta property="twitter:image" content="https://Srujan-D.github.io/project/aqproject/featured.jpg" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Building a level 5 autonomous quadcopter as part of the Team Robocon." /><meta property="og:image" content="https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -343,10 +383,6 @@
   },
   "headline": "Autonomous Quadcopter",
   
-  "image": [
-    "https://Srujan-D.github.io/project/aqproject/featured.jpg"
-  ],
-  
   "datePublished": "2020-12-01T00:00:00Z",
   "dateModified": "2020-12-01T00:00:00Z",
   
@@ -360,7 +396,7 @@
     "name": "Academic",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://Srujan-D.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+      "url": "https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "Building a level 5 autonomous quadcopter as part of the Team Robocon."
@@ -801,26 +837,18 @@
 
 
 
-
-
-
-
-
-
-
+  
 
   
   
-    
   
-
-
 <div class="article-container pt-3">
   <h1>Autonomous Quadcopter</h1>
 
   
 
   
+    
 
 
 <div class="article-metadata">
@@ -854,7 +882,7 @@
 
 </div>
 
-  
+    
 
 
 
@@ -912,14 +940,7 @@
 </div>
 
 
-</div>
-
-
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
-  <div style="position: relative">
-    <img src="/project/aqproject/featured_hu3d03a01dcc18bc5be0e67db3d8d209a6_224363_720x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
-    <span class="article-header-caption">Photo by rawpixel on Unsplash</span>
-  </div>
+  
 </div>
 
 
@@ -941,7 +962,7 @@
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/robotics/">Robotics</a>
+  <a class="badge badge-light" href="/tag/team/">Team</a>
   
 </div>
 

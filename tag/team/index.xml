@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | Academic</title>
-    <link>https://Srujan-D.github.io/project/</link>
-      <atom:link href="https://Srujan-D.github.io/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
+    <title>Team | Academic</title>
+    <link>https://Srujan-D.github.io/tag/team/</link>
+      <atom:link href="https://Srujan-D.github.io/tag/team/index.xml" rel="self" type="application/rss+xml" />
+    <description>Team</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Srujan Deolasee</copyright><lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png</url>
-      <title>Projects</title>
-      <link>https://Srujan-D.github.io/project/</link>
+      <title>Team</title>
+      <link>https://Srujan-D.github.io/tag/team/</link>
     </image>
     
     <item>
@@ -29,15 +29,6 @@
       <guid>https://Srujan-D.github.io/project/gennav/</guid>
       <description>&lt;p&gt;GenNav is a python library for robotics navigation algorithms and utilities that are commonly required in navigation stacks. The library aims to be completely modular and have a unified API so that it is usable in a broad range of applications and easily extensible to new robotics domains.&lt;/p&gt;
 &lt;p&gt;As a part of the team, I implemented path planning algorithms like Rapidly‐exploring Random Tree (RRT), Rapidly‐exploring Random Graph (RRG), some utility functions, etc. for a general robot navigation package. I also made Jupyter and Google Collab notebook tutorials for showing how to use the available algorithms.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Path Planner and Autonomous Controller for a Robot</title>
-      <link>https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/</link>
-      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/</guid>
-      <description>&lt;p&gt;Created an autonomous PID controller and a Path Planner using Randomly Exploring Random Tree (RRT) for a Trotbot robot. Trotbot is created by the Electronics and Robotics Club at BITS Goa. It is based on an Omnibase package developed by them. The Trotbot planned it&amp;rsquo;s way through a series of static obstacles, and traversed the resultant path using the PID controller code I wrote. I have used ROS and Python for completing the project. I simulated my code on Gazebo.&lt;/p&gt;
 </description>
     </item>
     

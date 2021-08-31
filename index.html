@@ -292,6 +292,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JP8D910Y7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-JP8D910Y7W', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -315,8 +354,8 @@
     <link rel="manifest" href="/manifest.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_180x180_fill_lanczos_center_3.png" />
 
   <link rel="canonical" href="https://Srujan-D.github.io/" />
 
@@ -337,8 +376,8 @@
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://Srujan-D.github.io/" />
   <meta property="og:title" content="Academic" />
-  <meta property="og:description" content="CS Junior at BITS Pilani" /><meta property="og:image" content="https://Srujan-D.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://Srujan-D.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="CS Junior at BITS Pilani" /><meta property="og:image" content="https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta property="og:updated_time" content="2030-06-01T13:00:00&#43;00:00" />
@@ -984,10 +1023,10 @@
   <div class="col-12 col-lg-8">
 
     
-    <h1>Biography</h1>
+    <h1>About Me</h1>
 
     <div class="article-style">
-      <h2 id="about-me">About Me</h2>
+      <!-- ## About Me -->
 <p>I am a CS Junior at BITS Pilani, and am deeply passionate about robots. I am currently working at multiple labs doing different kind of projects. I am a research intern at the A.R.M.S. Lab at IIT Bombay, under the supervision of Dr. Arpita Sinha. I am also doing a Machine Learning classification project at CSIR-CEERI Chennai under the mentorship of Dr. Madan Kumar Lakshmanan.</p>
 
     </div>
@@ -1109,7 +1148,7 @@
     <div class="featurette-icon"><i class="fab fa-r-project"></i></div>
     
     <div class="section-subheading">R</div>
-    <p>90%</p>
+    
   </div>
   
   
@@ -1122,7 +1161,7 @@
     <div class="featurette-icon"><i class="fas fa-chart-line"></i></div>
     
     <div class="section-subheading">Statistics</div>
-    <p>100%</p>
+    
   </div>
   
   
@@ -1135,7 +1174,7 @@
     <div class="featurette-icon"><i class="fas fa-camera-retro"></i></div>
     
     <div class="section-subheading">Photography</div>
-    <p>10%</p>
+    
   </div>
   
 </div>
@@ -1240,33 +1279,73 @@
       <div class="card">
         <div class="card-body">
           <div class="d-flex align-content-start">
-            <div class="mr-2 mb-2"><img src="/media/icons/brands/org-gc.svg" width="56px" height="56px" alt="GenCoin"></div>
+            <div class="mr-2 mb-2"><a href="https://www.ceeri.res.in/" target="_blank" rel="noopener"><img src="/media/icons/brands/ceeri.svg" width="56px" height="56px" alt="CSIR-CEERI"></a></div>
             <div>
           
 
-              <div class="section-subheading card-title exp-title text-muted my-0">CEO</div>
-              <div class="section-subheading card-title exp-company text-muted my-0">GenCoin</div>
+              <div class="section-subheading card-title exp-title text-muted my-0">Research Intern</div>
+              <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.ceeri.res.in/" target="_blank" rel="noopener">CSIR-CEERI</a></div>
               <div class="text-muted exp-meta">
-                Jan 2021 –
+                Aug 2021 –
                 
                   Present
                 
                 
                   <span class="middot-divider"></span>
-                  <span>California</span>
+                  <span>Pilani, India [Remote]</span>
                 
               </div>
             </div>
           </div>
           
 
-          <div class="card-text"><p>Responsibilities include:</p>
-<ul>
-<li>Analysing</li>
-<li>Modelling</li>
-<li>Deploying</li>
-</ul>
-</div>
+          <div class="card-text">Working on the path planning spect of an indoor drone to be used for warehouse inventory management.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border exp-fill">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex align-content-start">
+            <div class="mr-2 mb-2"><a href="https://www.ceeri.res.in/" target="_blank" rel="noopener"><img src="/media/icons/brands/ceeri.svg" width="56px" height="56px" alt="CSIR-CEERI"></a></div>
+            <div>
+          
+
+              <div class="section-subheading card-title exp-title text-muted my-0">Research Intern</div>
+              <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.ceeri.res.in/" target="_blank" rel="noopener">CSIR-CEERI</a></div>
+              <div class="text-muted exp-meta">
+                May 2021 –
+                
+                  Present
+                
+                
+                  <span class="middot-divider"></span>
+                  <span>Chennai, India [Remote]</span>
+                
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="card-text">Working on analysis of PPG signals for classifying the state (alert/fatigue) of a person using ML classification algorithms.</div>
         </div>
       </div>
     </div>
@@ -1292,27 +1371,27 @@
       <div class="card">
         <div class="card-body">
           <div class="d-flex align-content-start">
-            <div class="mr-2 mb-2"><img src="/media/icons/brands/org-x.svg" width="56px" height="56px" alt="University X"></div>
+            <div class="mr-2 mb-2"><a href="https://www.sc.iitb.ac.in/robotics/index.html" target="_blank" rel="noopener"><img src="/media/icons/brands/iitb.svg" width="56px" height="56px" alt="Autonomous Robots and Multi-robot Systems Lab, IIT Bombay"></a></div>
             <div>
           
 
-              <div class="section-subheading card-title exp-title text-muted my-0">Professor of Semiconductor Physics</div>
-              <div class="section-subheading card-title exp-company text-muted my-0">University X</div>
+              <div class="section-subheading card-title exp-title text-muted my-0">Research Intern</div>
+              <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.sc.iitb.ac.in/robotics/index.html" target="_blank" rel="noopener">Autonomous Robots and Multi-robot Systems Lab, IIT Bombay</a></div>
               <div class="text-muted exp-meta">
-                Jan 2016 –
+                May 2021 –
                 
-                  Dec 2020
+                  Aug 2021
                 
                 
                   <span class="middot-divider"></span>
-                  <span>California</span>
+                  <span>Mumbai, India [Remote]</span>
                 
               </div>
             </div>
           </div>
           
 
-          <div class="card-text">Taught electronic engineering and researched semiconductor physics.</div>
+          <div class="card-text">Worked on the motion planning of a tractor‑trailer combination using a Voronoi based Hybrid A* algorithm.</div>
         </div>
       </div>
     </div>
@@ -1401,75 +1480,20 @@
   
   
     <div class="card experience course">
-      <div class="card-body">
-        <div class="d-flex align-content-start">
-          <div class="mr-2 mb-2"><a href="https://www.coursera.org" target="_blank" rel="noopener"><img src="/media/icons/brands/coursera.svg" width="56px" height="56px" alt="Coursera"></a></div>
-          <div>
-        <div class="section-subheading card-title exp-title text-muted my-0">Neural Networks and Deep Learning</div><div class="card-subtitle my-0 article-metadata"><a href="https://www.coursera.org" target="_blank" rel="noopener">Coursera</a><span class="middot-divider"></span>
+      <div class="card-body"><div class="section-subheading card-title exp-title text-muted my-0">e-Yantra Robotics Competition</div><div class="card-subtitle my-0 article-metadata"><a href="https://www.e-yantra.org/" target="_blank" rel="noopener">E-Yantra</a><span class="middot-divider"></span>
 
-              Jan 2021
+              Oct 2020
+              
+              – Mar 2021
               
             </div>
-          </div>
-        </div>
+
+        
+          <div class="card-text">Placed in the top 20 among 472 entries as a part of drone delivery theme in e‐Yantra Robotics Competition by IIT Bombay, funded by Ministry of Education, India.</div>
         
 
         
-
-        
-          <a class="card-link" href="https://www.coursera.org" target="_blank" rel="noopener">
-            See certificate
-          </a>
-        
-      </div>
-    </div>
-  
-    <div class="card experience course">
-      <div class="card-body">
-        <div class="d-flex align-content-start">
-          <div class="mr-2 mb-2"><a href="https://www.edx.org" target="_blank" rel="noopener"><img src="/media/icons/brands/edx.svg" width="56px" height="56px" alt="edX"></a></div>
-          <div>
-        <a href="https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals" target="_blank" rel="noopener"><div class="section-subheading card-title exp-title text-muted my-0">Blockchain Fundamentals</div></a><div class="card-subtitle my-0 article-metadata"><a href="https://www.edx.org" target="_blank" rel="noopener">edX</a><span class="middot-divider"></span>
-
-              Jan 2021
-              
-            </div>
-          </div>
-        </div>
-        
-
-        
-          <div class="card-text">Formulated informed blockchain models, hypotheses, and use cases.</div>
-        
-
-        
-          <a class="card-link" href="https://www.edx.org" target="_blank" rel="noopener">
-            See certificate
-          </a>
-        
-      </div>
-    </div>
-  
-    <div class="card experience course">
-      <div class="card-body">
-        <div class="d-flex align-content-start">
-          <div class="mr-2 mb-2"><a href="https://www.datacamp.com" target="_blank" rel="noopener"><img src="/media/icons/brands/datacamp.svg" width="56px" height="56px" alt="DataCamp"></a></div>
-          <div>
-        <div class="section-subheading card-title exp-title text-muted my-0">Object-Oriented Programming in R</div><div class="card-subtitle my-0 article-metadata"><a href="https://www.datacamp.com" target="_blank" rel="noopener">DataCamp</a><span class="middot-divider"></span>
-
-              Jul 2020
-              
-              – Dec 2020
-              
-            </div>
-          </div>
-        </div>
-        
-
-        
-
-        
-          <a class="card-link" href="https://www.datacamp.com" target="_blank" rel="noopener">
+          <a class="card-link" href="uploads/eyantra.pdf" target="_blank" rel="noopener">
             See certificate
           </a>
         
@@ -1827,12 +1851,12 @@
               
               
               
-              <a href="#" data-filter=".js-id-Deep-Learning" class="btn btn-primary btn-lg">Deep Learning</a>
+              <a href="#" data-filter=".js-id-Personal" class="btn btn-primary btn-lg">Personal Projects</a>
             
               
               
               
-              <a href="#" data-filter=".js-id-Demo" class="btn btn-primary btn-lg">Other</a>
+              <a href="#" data-filter=".js-id-Team" class="btn btn-primary btn-lg">Technical Club/Team Projects</a>
             
           </div>
         </div>
@@ -1858,7 +1882,7 @@
         
 
 
-<div class="col-12 isotope-item js-id-Robotics">
+<div class="col-12 isotope-item js-id-Team">
   
 
 
@@ -1957,11 +1981,6 @@
   <div class="ml-3">
     
     
-    
-    <a href="/project/aqproject/" >
-      <img src="/project/aqproject/featured_hu3d03a01dcc18bc5be0e67db3d8d209a6_224363_150x0_resize_q75_lanczos.jpg" alt="Autonomous Quadcopter" loading="lazy">
-    </a>
-    
   </div>
 </div>
 
@@ -1979,7 +1998,7 @@
         
 
 
-<div class="col-12 isotope-item js-id-Robotics">
+<div class="col-12 isotope-item js-id-Team">
   
 
 
@@ -2055,6 +2074,138 @@
 
 
 
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    
+      
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="/" >
+    
+    
+  </a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+</div>
+
+      
+
+    
+
+      
+      
+      
+
+      
+        
+
+
+<div class="col-12 isotope-item js-id-Personal">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/project/path-planner-and-autonomous-controller-for-a-robot/" >Path Planner and Autonomous Controller for a Robot</a>
+    </div>
+
+    
+    <a href="/project/path-planner-and-autonomous-controller-for-a-robot/"  class="summary-link">
+      <div class="article-style">
+        Developed software for a robot to plan and traverse a obstacle free path autonomously.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/Srujan-D/ROS-Project" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://youtu.be/AsAUx0Uxf8Y" target="_blank" rel="noopener">
+  Video
+</a>
 
 
 
@@ -2851,7 +3002,12 @@
         
         
         
-        <a href="/tag/robotics/" style="font-size:1.5202086796428946rem">Robotics</a>
+        <a href="/tag/personal/" style="font-size:0.7rem">Personal</a>
+      
+        
+        
+        
+        <a href="/tag/team/" style="font-size:1.5202086796428946rem">Team</a>
       
         
         
