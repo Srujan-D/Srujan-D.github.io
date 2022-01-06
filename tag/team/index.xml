@@ -5,22 +5,12 @@
     <link>https://Srujan-D.github.io/tag/team/</link>
       <atom:link href="https://Srujan-D.github.io/tag/team/index.xml" rel="self" type="application/rss+xml" />
     <description>Team</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Srujan Deolasee</copyright><lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Srujan Deolasee</copyright><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png</url>
       <title>Team</title>
       <link>https://Srujan-D.github.io/tag/team/</link>
     </image>
-    
-    <item>
-      <title>Autonomous Quadcopter</title>
-      <link>https://Srujan-D.github.io/project/aqproject/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://Srujan-D.github.io/project/aqproject/</guid>
-      <description>&lt;p&gt;This project was undertaken by the Team Robocon. It is a fully funded by the BITS Alumni Association (BITSAA). We aim to build quadcopter achieving a level 5 autonomy.&lt;/p&gt;
-&lt;p&gt;I am leading the State Estimation subsystem of the project. Currently, the plan is to fuse the RTAB-Map and the Extended Kalman Filter algorithms to accomplish the goal.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>GenNav</title>
