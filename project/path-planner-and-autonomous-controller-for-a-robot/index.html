@@ -326,10 +326,9 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
     <meta property="twitter:site" content="@sruj_d" />
     <meta property="twitter:creator" content="@sruj_d" />
@@ -337,8 +336,8 @@
   <meta property="og:site_name" content="Srujan Deolasee" />
   <meta property="og:url" content="https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/" />
   <meta property="og:title" content="Path Planner and Autonomous Controller for a Robot | Srujan Deolasee" />
-  <meta property="og:description" content="Developed software for a robot to plan and traverse a obstacle free path autonomously." /><meta property="og:image" content="https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Developed software for a robot to plan and traverse a obstacle free path autonomously." /><meta property="og:image" content="https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/featured.gif" />
+    <meta property="twitter:image" content="https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/featured.gif" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -371,6 +370,10 @@
     "@id": "https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/"
   },
   "headline": "Path Planner and Autonomous Controller for a Robot",
+  
+  "image": [
+    "https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/featured.gif"
+  ],
   
   "datePublished": "2020-06-01T00:00:00Z",
   "dateModified": "2020-06-01T00:00:00Z",
@@ -789,18 +792,24 @@
 
 
 
-  
+
+
+
+
+
+
+
 
   
   
-  
+
+
 <div class="article-container pt-3">
   <h1>Path Planner and Autonomous Controller for a Robot</h1>
 
   
 
   
-    
 
 
 <div class="article-metadata">
@@ -834,7 +843,7 @@
 
 </div>
 
-    
+  
 
 
 
@@ -895,18 +904,22 @@
   
   
     
-    
-      
-    
   
-  <a class="btn btn-outline-primary btn-page-header" href="/" >
-    </a>
+  <a class="btn btn-outline-primary btn-page-header" href="https://srujan-d.github.io/#projects" target="_blank" rel="noopener">
+    Back</a>
 
 
 </div>
 
 
-  
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 600px; max-height: 337px;">
+  <div style="position: relative">
+    <img src="/project/path-planner-and-autonomous-controller-for-a-robot/featured.gif" alt="" class="featured-image">
+    
+  </div>
 </div>
 
 
@@ -914,7 +927,16 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Created an autonomous PID controller and a Path Planner using Randomly Exploring Random Tree (RRT) for a Trotbot robot. Trotbot is created by the Electronics and Robotics Club at BITS Goa. It is based on an Omnibase package developed by them. The Trotbot planned it&rsquo;s way through a series of static obstacles, and traversed the resultant path using the PID controller code I wrote. I have used ROS and Python for completing the project. I simulated my code on Gazebo.</p>
+      <p>This is a project based on path planning and control theory of robots. What this means is that I need to plan a path from the given start to goal points through a given environment using one of the path planning algorithms. I then need to create a code for a controller for the robot. This will enable the robot to traverse the path in a &lsquo;point-by-point&rsquo; manner to reach the goal. The environment in which my project runs consists of a series of static obstacles and the robot. <a href="https://github.com/ERC-BPGC/Trotbot" target="_blank" rel="noopener">Trotbot</a> (a robot model) has been used to test my code. Trotbot is based on the Omnibase package. Both are developed by the <a href="https://github.com/ERC-BPGC/" target="_blank" rel="noopener">Electronics and Robotics Club, BITS Goa</a>.</p>
+<p>I implemented a PID controller and a Randomly Exploring Random Tree (RRT) path planner for a Trotbot robot. The Trotbot autonomously planned its way through a series of static obstacles and traversed the resultant path. The code was written using Python, and ROS was used as the framework. Each entity with different functionality (e.g.: controller, path planner) was written as a ROS Node. The Publisher-Subscriber, or Pub-Sub, model in ROS was used to set up the communication between the nodes.</p>
+<p>Structure of the project:</p>
+<ol>
+<li><em>Obstacle detector node</em> which publishes a fixed list of obstacles. Here I published the list of centre points of the cylindrical obstacles.</li>
+<li><em>Planner node</em> which subscribes to obstacles and publishes a path.</li>
+<li><em>Controller node</em> which subscribes to the path and the current pose of the robot. It calculates the required velocity of the robot, and publishes it on the corresponding topic. This controller will traverse the path one point at a time using PID Controller.</li>
+</ol>
+<p>All the code was tested on the robot using simulations on Gazebo. More information about the project can be found <a href="https://github.com/Srujan-D/ROS-Project/blob/master/README.md#ros-project" target="_blank" rel="noopener">here</a>.</p>
+<p><em>P.S.: This project was done as a part of the QSTP Course Project. QSTP (Quark Summer Term Projects) is an annual event where the technical clubs from BITS Goa offer introductory courses in their respective domains. My introduction to robotics was this very project, offered in May 2020 during the COVID-19 lockdown. The course page can be found <a href="https://github.com/adbidwai/QSTP-Robotics_Automation_using_ROS" target="_blank" rel="noopener">here</a>. Since it was my first door to the vast field of robotics, this project holds a special position in my heart.  I&rsquo;ll always be grateful to the course mentors, whose efforts are the reason I have come this far in robotics.</em></p>
 
     </div>
 
@@ -1204,7 +1226,7 @@
 
   
   <p class="powered-by">
-    © 2021 Srujan Deolasee
+    © 2022 Srujan Deolasee
   </p>
   
 

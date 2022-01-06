@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Robotics | Academic</title>
+    <title>Robotics | Srujan Deolasee</title>
     <link>https://Srujan-D.github.io/tag/robotics/</link>
       <atom:link href="https://Srujan-D.github.io/tag/robotics/index.xml" rel="self" type="application/rss+xml" />
     <description>Robotics</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Srujan Deolasee</copyright><lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Srujan Deolasee</copyright><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://Srujan-D.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png</url>
       <title>Robotics</title>
       <link>https://Srujan-D.github.io/tag/robotics/</link>
     </image>
-    
-    <item>
-      <title>Autonomous Quadcopter</title>
-      <link>https://Srujan-D.github.io/project/aqproject/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://Srujan-D.github.io/project/aqproject/</guid>
-      <description>&lt;p&gt;This project was undertaken by the Team Robocon. It is a fully funded by the BITS Alumni Association (BITSAA). We aim to build quadcopter achieving a level 5 autonomy.&lt;/p&gt;
-&lt;p&gt;I am leading the State Estimation subsystem of the project. Currently, the plan is to fuse the RTAB-Map and the Extended Kalman Filter algorithms to accomplish the goal.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>GenNav</title>
       <link>https://Srujan-D.github.io/project/gennav/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://Srujan-D.github.io/project/gennav/</guid>
-      <description>&lt;p&gt;GenNav is a python library for robotics navigation algorithms and utilities that are commonly required in navigation stacks. The library aims to be completely modular and have a unified API so that it is usable in a broad range of applications and easily extensible to new robotics domains.&lt;/p&gt;
-&lt;p&gt;As a part of the team, I implemented path planning algorithms like Rapidly‐exploring Random Tree (RRT), Rapidly‐exploring Random Graph (RRG), some utility functions, etc. for a general robot navigation package. I also made Jupyter and Google Collab notebook tutorials for showing how to use the available algorithms.&lt;/p&gt;
+      <description>&lt;p&gt;GenNav, short for &amp;lsquo;General Navigation&amp;rsquo;, was undertaken by the Electronics and Robotics Club at BITS Goa. As we did the project during the COVID-19 lockdown, I remotely contributed to the open-source project.&lt;/p&gt;
+&lt;p&gt;GenNav is a python library for robotics navigation algorithms and utilities commonly required in navigation stacks. The library aims to be completely modular and have a unified API so that it is usable in a broad range of applications and easily extensible to new robotics domains. We further extended the project to construct a ROS Wrapper on top of Gennav, called &amp;lsquo;gennav_ros&amp;rsquo;. &amp;lsquo;gennav_ros&amp;rsquo; can be used if someone wishes to use &amp;lsquo;gennav&amp;rsquo; in a ROS based stack. Since the package is open-sourced using PyPi &lt;a href=&#34;https://pypi.org/project/gennav/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, GenNav can also be installed using &lt;code&gt;pip install gennav&lt;/code&gt;, although installation from source is recommended. Rudimentary documentation for the project can be found &lt;a href=&#34;https://gennav.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As part of the team, I implemented path planning algorithms like Rapidly‐exploring Random Tree (RRT), Rapidly‐exploring Random Graph (RRG), and some utility classes and methods for implementing Graphs, etc. While implementing the algorithms from scratch was challenging (albeit fun), the more important thing to take care of was maintaining the API across all the path planners and making all generalised pieces of code &amp;lsquo;modular&amp;rsquo;. I also made Jupyter and Google Colab notebook tutorials for showing how to use the available algorithms. The notebooks can be found &lt;a href=&#34;https://github.com/ERC-BPGC/gennav/tree/master/examples/planners&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Self Balancing two wheeled robot</title>
+      <link>https://Srujan-D.github.io/project/self-balancing-robot/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://Srujan-D.github.io/project/self-balancing-robot/</guid>
+      <description>&lt;p&gt;A strictly two-wheeled robot (without a free castor wheel for support) provides a helpful platform for testing complex control algorithms. It helps ensure that a multi-variable system will be physically stable. In this project, we study the use of the modern Linear Quadratic Regulator controller for balancing the robot and extend the application for the robot to traverse any path. A differential drive mechanism is used while developing the robot, which helps decouple the translation and rotation stages in path traversal. An A* algorithm has been used for path planning in a static obstacle occupied environment. It is shown that an LQR controlled robot can successfully help the robot stabilize on the spot without falling and enable linear motion in the forward direction.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;P.S.: This project was done as a part of the Autonomous Mobile Robotics course offered at BITS Pilani. The project report can be found &lt;a href=&#34;https://srujan-d.github.io/uploads/AMR_Course_Project_Report.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

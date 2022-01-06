@@ -326,10 +326,9 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
     <meta property="twitter:site" content="@sruj_d" />
     <meta property="twitter:creator" content="@sruj_d" />
@@ -337,8 +336,8 @@
   <meta property="og:site_name" content="Srujan Deolasee" />
   <meta property="og:url" content="https://Srujan-D.github.io/project/gennav/" />
   <meta property="og:title" content="GenNav | Srujan Deolasee" />
-  <meta property="og:description" content="Built a general navigation library in python." /><meta property="og:image" content="https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Built a general navigation library in python." /><meta property="og:image" content="https://Srujan-D.github.io/project/gennav/featured.png" />
+    <meta property="twitter:image" content="https://Srujan-D.github.io/project/gennav/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -371,6 +370,10 @@
     "@id": "https://Srujan-D.github.io/project/gennav/"
   },
   "headline": "GenNav",
+  
+  "image": [
+    "https://Srujan-D.github.io/project/gennav/featured.png"
+  ],
   
   "datePublished": "2020-06-01T00:00:00Z",
   "dateModified": "2020-06-01T00:00:00Z",
@@ -408,7 +411,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="b7da0f72ea8ab732a9e0d7607b5ade23" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="3d0d3d31d90b1afffd904ce94c543a20" >
 
   
   
@@ -789,18 +792,26 @@
 
 
 
-  
+
+
+
+
+
+
+
 
   
   
+    
   
+
+
 <div class="article-container pt-3">
   <h1>GenNav</h1>
 
   
 
   
-    
 
 
 <div class="article-metadata">
@@ -834,7 +845,7 @@
 
 </div>
 
-    
+  
 
 
 
@@ -887,18 +898,22 @@
   
   
     
-    
-      
-    
   
-  <a class="btn btn-outline-primary btn-page-header" href="/" >
-    </a>
+  <a class="btn btn-outline-primary btn-page-header" href="https://srujan-d.github.io/#projects" target="_blank" rel="noopener">
+    Back</a>
 
 
 </div>
 
 
-  
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 533px;">
+  <div style="position: relative">
+    <img src="/project/gennav/featured_hufcdd480ae0bfc66f79866bc250308c4d_102655_720x0_resize_lanczos_3.png" alt="" class="featured-image">
+    <span class="article-header-caption">GenNav</span>
+  </div>
 </div>
 
 
@@ -906,8 +921,9 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>GenNav is a python library for robotics navigation algorithms and utilities that are commonly required in navigation stacks. The library aims to be completely modular and have a unified API so that it is usable in a broad range of applications and easily extensible to new robotics domains.</p>
-<p>As a part of the team, I implemented path planning algorithms like Rapidly‐exploring Random Tree (RRT), Rapidly‐exploring Random Graph (RRG), some utility functions, etc. for a general robot navigation package. I also made Jupyter and Google Collab notebook tutorials for showing how to use the available algorithms.</p>
+      <p>GenNav, short for &lsquo;General Navigation&rsquo;, was undertaken by the Electronics and Robotics Club at BITS Goa. As we did the project during the COVID-19 lockdown, I remotely contributed to the open-source project.</p>
+<p>GenNav is a python library for robotics navigation algorithms and utilities commonly required in navigation stacks. The library aims to be completely modular and have a unified API so that it is usable in a broad range of applications and easily extensible to new robotics domains. We further extended the project to construct a ROS Wrapper on top of Gennav, called &lsquo;gennav_ros&rsquo;. &lsquo;gennav_ros&rsquo; can be used if someone wishes to use &lsquo;gennav&rsquo; in a ROS based stack. Since the package is open-sourced using PyPi <a href="https://pypi.org/project/gennav/" target="_blank" rel="noopener">here</a>, GenNav can also be installed using <code>pip install gennav</code>, although installation from source is recommended. Rudimentary documentation for the project can be found <a href="https://gennav.readthedocs.io/en/latest/" target="_blank" rel="noopener">here</a>.</p>
+<p>As part of the team, I implemented path planning algorithms like Rapidly‐exploring Random Tree (RRT), Rapidly‐exploring Random Graph (RRG), and some utility classes and methods for implementing Graphs, etc. While implementing the algorithms from scratch was challenging (albeit fun), the more important thing to take care of was maintaining the API across all the path planners and making all generalised pieces of code &lsquo;modular&rsquo;. I also made Jupyter and Google Colab notebook tutorials for showing how to use the available algorithms. The notebooks can be found <a href="https://github.com/ERC-BPGC/gennav/tree/master/examples/planners" target="_blank" rel="noopener">here</a>.</p>
 
     </div>
 
@@ -921,6 +937,8 @@
 <div class="article-tags">
   
   <a class="badge badge-light" href="/tag/team/">Team</a>
+  
+  <a class="badge badge-light" href="/tag/robotics/">Robotics</a>
   
 </div>
 
@@ -1153,6 +1171,8 @@
       
       <li><a href="/project/aqproject/">Autonomous Quadcopter</a></li>
       
+      <li><a href="/project/self-balancing-robot/">Self Balancing two wheeled robot</a></li>
+      
     </ul>
   </div>
   
@@ -1197,7 +1217,7 @@
 
   
   <p class="powered-by">
-    © 2021 Srujan Deolasee
+    © 2022 Srujan Deolasee
   </p>
   
 

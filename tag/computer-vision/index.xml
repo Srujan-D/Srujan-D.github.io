@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic | Srujan Deolasee</title>
-    <link>https://Srujan-D.github.io/tag/academic/</link>
-      <atom:link href="https://Srujan-D.github.io/tag/academic/index.xml" rel="self" type="application/rss+xml" />
-    <description>Academic</description>
+    <title>Computer Vision | Srujan Deolasee</title>
+    <link>https://Srujan-D.github.io/tag/computer-vision/</link>
+      <atom:link href="https://Srujan-D.github.io/tag/computer-vision/index.xml" rel="self" type="application/rss+xml" />
+    <description>Computer Vision</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Srujan Deolasee</copyright><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png</url>
-      <title>Academic</title>
-      <link>https://Srujan-D.github.io/tag/academic/</link>
+      <title>Computer Vision</title>
+      <link>https://Srujan-D.github.io/tag/computer-vision/</link>
     </image>
     
     <item>
@@ -18,16 +18,6 @@
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://Srujan-D.github.io/project/human_authentication_system/</guid>
       <description>&lt;p&gt;The project was based on the study of various feature detectors and image matching algorithms applied on the forehead dataset. As a part of Deep Learning course, I built a computer vision based forehead based human authentication on mobile and hand held devices. The project covers the use of SIFT, SURF, ORB, ArcFace, and AKAZE algorithms for matching images. Image Preprocessing (CLAHE) was performed before applying the matching algorithms. I achieved an average accuracy of 59.99%, and best accuracy of 73.997% using the ArcFace algorithm. A genuine-imposter histogram was plotted for each algorithm. The generated genuine and histogram datasets were used to plot the receiver operating characteristic (ROC) curve of FRR (X-Axis) vs FRR (Y-Axis). Correct Recognition Rate (CRR) and Equal Error Rate (EER) were calculated from the resulting ROC curve. The detailed report of the project can be found &lt;a href=&#34;https://srujan-d.github.io/uploads/DL_Class_project_report.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Self Balancing two wheeled robot</title>
-      <link>https://Srujan-D.github.io/project/self-balancing-robot/</link>
-      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://Srujan-D.github.io/project/self-balancing-robot/</guid>
-      <description>&lt;p&gt;A strictly two-wheeled robot (without a free castor wheel for support) provides a helpful platform for testing complex control algorithms. It helps ensure that a multi-variable system will be physically stable. In this project, we study the use of the modern Linear Quadratic Regulator controller for balancing the robot and extend the application for the robot to traverse any path. A differential drive mechanism is used while developing the robot, which helps decouple the translation and rotation stages in path traversal. An A* algorithm has been used for path planning in a static obstacle occupied environment. It is shown that an LQR controlled robot can successfully help the robot stabilize on the spot without falling and enable linear motion in the forward direction.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;P.S.: This project was done as a part of the Autonomous Mobile Robotics course offered at BITS Pilani. The project report can be found &lt;a href=&#34;https://srujan-d.github.io/uploads/AMR_Course_Project_Report.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

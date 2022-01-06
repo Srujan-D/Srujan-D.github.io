@@ -5,7 +5,7 @@
     <link>https://Srujan-D.github.io/tag/personal/</link>
       <atom:link href="https://Srujan-D.github.io/tag/personal/index.xml" rel="self" type="application/rss+xml" />
     <description>Personal</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 Srujan Deolasee</copyright><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Srujan Deolasee</copyright><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Srujan-D.github.io/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_512x512_fill_lanczos_center_3.png</url>
       <title>Personal</title>
@@ -17,7 +17,16 @@
       <link>https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://Srujan-D.github.io/project/path-planner-and-autonomous-controller-for-a-robot/</guid>
-      <description>&lt;p&gt;Created an autonomous PID controller and a Path Planner using Randomly Exploring Random Tree (RRT) for a Trotbot robot. Trotbot is created by the Electronics and Robotics Club at BITS Goa. It is based on an Omnibase package developed by them. The Trotbot planned it&amp;rsquo;s way through a series of static obstacles, and traversed the resultant path using the PID controller code I wrote. I have used ROS and Python for completing the project. I simulated my code on Gazebo.&lt;/p&gt;
+      <description>&lt;p&gt;This is a project based on path planning and control theory of robots. What this means is that I need to plan a path from the given start to goal points through a given environment using one of the path planning algorithms. I then need to create a code for a controller for the robot. This will enable the robot to traverse the path in a &amp;lsquo;point-by-point&amp;rsquo; manner to reach the goal. The environment in which my project runs consists of a series of static obstacles and the robot. &lt;a href=&#34;https://github.com/ERC-BPGC/Trotbot&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Trotbot&lt;/a&gt; (a robot model) has been used to test my code. Trotbot is based on the Omnibase package. Both are developed by the &lt;a href=&#34;https://github.com/ERC-BPGC/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Electronics and Robotics Club, BITS Goa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I implemented a PID controller and a Randomly Exploring Random Tree (RRT) path planner for a Trotbot robot. The Trotbot autonomously planned its way through a series of static obstacles and traversed the resultant path. The code was written using Python, and ROS was used as the framework. Each entity with different functionality (e.g.: controller, path planner) was written as a ROS Node. The Publisher-Subscriber, or Pub-Sub, model in ROS was used to set up the communication between the nodes.&lt;/p&gt;
+&lt;p&gt;Structure of the project:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Obstacle detector node&lt;/em&gt; which publishes a fixed list of obstacles. Here I published the list of centre points of the cylindrical obstacles.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Planner node&lt;/em&gt; which subscribes to obstacles and publishes a path.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Controller node&lt;/em&gt; which subscribes to the path and the current pose of the robot. It calculates the required velocity of the robot, and publishes it on the corresponding topic. This controller will traverse the path one point at a time using PID Controller.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;All the code was tested on the robot using simulations on Gazebo. More information about the project can be found &lt;a href=&#34;https://github.com/Srujan-D/ROS-Project/blob/master/README.md#ros-project&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;P.S.: This project was done as a part of the QSTP Course Project. QSTP (Quark Summer Term Projects) is an annual event where the technical clubs from BITS Goa offer introductory courses in their respective domains. My introduction to robotics was this very project, offered in May 2020 during the COVID-19 lockdown. The course page can be found &lt;a href=&#34;https://github.com/adbidwai/QSTP-Robotics_Automation_using_ROS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Since it was my first door to the vast field of robotics, this project holds a special position in my heart.  I&amp;rsquo;ll always be grateful to the course mentors, whose efforts are the reason I have come this far in robotics.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
