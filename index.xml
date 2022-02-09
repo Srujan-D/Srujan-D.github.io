@@ -65,11 +65,11 @@ the market. It is highly customizable - both with respect to hardware and softwa
 &lt;hr&gt;
 &lt;h2 id=&#34;sensors&#34;&gt;Sensors&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;Spot features a mapping, localization, and autonomous traverse system collectively known as GraphNav. GraphNav uses sensor data to create waypoints, which are places in the real world it can travel to. Each waypoint has an associated snapshot of feature data from its location. This data allows the robot to track its position as it moves from waypoint to waypoint and correct its path.&lt;/li&gt;
+&lt;li&gt;Spot features a mapping, localization, and autonomous traverse system collectively known as  GraphNav. GraphNav uses sensor data to create waypoints, which are places in the real world it can travel to. Each waypoint has an associated snapshot of feature data from its location. This data allows the robot to track its position as it moves from waypoint to waypoint and correct its path.&lt;/li&gt;
 &lt;li&gt;Spot uses 5 Intel Realsense cameras’ 360 degree perception to map surrounding terrain and avoid obstacles dynamically.&lt;/li&gt;
-&lt;li&gt;Robots like Anymal on the other hand, use a lidar and and a monocular camera mounted on a 2dof arm to achieve a similar performance. The lidar is used for mapping and gathering 3d point cloud data whereas the camera is used for object detection whereas Cheetah, developed by MIT only uses a forward facing stereo camera for obstacle detection and avoidance.&lt;/li&gt;
-&lt;li&gt;Based on the use of sensor data from by GraphNav, we could potentially replace the 5 Intel Realsense cameras with a system like Anymal. The lidar can be used to create maps and a stereo camera can be mounted on a 2dof arm instead of a monocular camera. At every waypoint, the stereo camera can be rotated to capture multiple images at diﬀerent orientations to cover its complete surroundings. Using this system, the quadruped would be able to achieve similar performance while reducing the cost of sensors to half.&lt;/li&gt;
-&lt;li&gt;Also, the Intel Realsense cameras are not optimum for working in outdoor environments, while a zed camera does not have such a limitation. Hence using a lidar with a zed camera mounted on a gimbal or a 2dof arm can provide similar if not better performance at a lower price.&lt;/li&gt;
+&lt;li&gt;Robots like Anymal on the other hand, use a lidar and and a monocular camera mounted on a 2 DOF arm to achieve a similar performance. The lidar is used for mapping and gathering 3d point cloud data whereas the camera is used for object detection whereas Cheetah, developed by MIT only uses a forward facing stereo camera for obstacle detection and avoidance.&lt;/li&gt;
+&lt;li&gt;Based on the use of sensor data from by GraphNav, we could potentially replace the 5 Intel Realsense cameras with a system like Anymal. The lidar can be used to create maps and a stereo camera can be mounted on a 2 DOF arm instead of a monocular camera. At every waypoint, the stereo camera can be rotated to capture multiple images at diﬀerent orientations to cover its complete surroundings. Using this system, the quadruped would be able to achieve similar performance while reducing the cost of sensors to half.&lt;/li&gt;
+&lt;li&gt;Also, the Intel Realsense cameras are not optimum for working in outdoor environments, while a zed camera does not have such a limitation. Hence using a lidar with a zed camera mounted on a gimbal or a 2 DOF arm can provide similar if not better performance at a lower price.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;actuators&#34;&gt;Actuators&lt;/h2&gt;
@@ -184,8 +184,8 @@ traversal.&lt;/li&gt;
       <link>https://Srujan-D.github.io/project/spot/</link>
       <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://Srujan-D.github.io/project/spot/</guid>
-      <description>&lt;p&gt;SPOT is a Quadruped robot developed by Boston Dynamics and is currently one of the most famous in
-the market. It is highly customizable - both with respect to hardware and software. As a part of the term project in the Robotics course at BITS Pilani (BITS F441), Tanishq and I were tasked with studying the developments and advancements of Spot. We presented our study to Dr B. Rout. These are the slides of the same.&lt;/p&gt;
+      <description>&lt;p&gt;Spot is a Quadruped robot developed by Boston Dynamics and is currently one of the most famous in
+the market. It is highly customizable - both with respect to hardware and software. As a part of the term project in the Robotics course at BITS Pilani (BITS F441), Tanishq and I were tasked with studying the developments and advancements of Spot. We presented our study to Dr B.K. Rout. These are the slides of the same.&lt;/p&gt;
 &lt;p&gt;One of the most difficult task in order to complete the project was finding information about the working of Spot (and not just a general quadruped). This was challenging as all the information about the robot is patented by Boston Dynamics. So we had to work on intelligent assumptions about what might be happening behind the scenes!&lt;/p&gt;
 </description>
     </item>
