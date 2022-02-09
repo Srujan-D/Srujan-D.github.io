@@ -5,7 +5,154 @@
     <link>https://Srujan-D.github.io/slides/</link>
       <atom:link href="https://Srujan-D.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
     <description>Slides</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Srujan Deolasee</copyright><lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Srujan Deolasee</copyright><lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Spot</title>
+      <link>https://Srujan-D.github.io/slides/spot/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://Srujan-D.github.io/slides/spot/</guid>
+      <description>&lt;h1 id=&#34;studies-and-advances-in-development-of-spot-by-boston-dynamics&#34;&gt;Studies and Advances in development of Spot by Boston Dynamics&lt;/h1&gt;
+&lt;p&gt;Team:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Srujan Deolasee (2019A7PS1139P)&lt;/li&gt;
+&lt;li&gt;Tanishq Duhan (2019B5A70636P)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Spot is a Quadruped robot developed by Boston Dynamics and is currently one of the most famous in
+the market. It is highly customizable - both with respect to hardware and software. Recently we saw that Spot robot came with a manipulator on top of it. It can operate in temperature ranges from -20 to 45 degree C.&lt;/li&gt;
+&lt;li&gt;Due to these reasons, Spot currently has applications in various industries and is further used by different research institutes and helping them conduct breakthrough research in the ﬁeld of robotics.&lt;/li&gt;
+&lt;li&gt;As discussed above, Spot has very few to no limitations, and Boston Dynamics is working effortlessly to improve the already near perfect Robot-dog.&lt;/li&gt;
+&lt;li&gt;The only big limitation Spot has is its price. Its current price is of an enormous $75,000.&lt;/li&gt;
+&lt;li&gt;Our aim is to discuss various methods of reducing the price of Spot without signiﬁcantly decreasing it performance capabilities by suggesting replacements of current parts and comparing Spot ot its competitors like Cheetah or Anymal.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;existing-technology-and-opportunities-for-cost-reduction&#34;&gt;Existing Technology and Opportunities for Cost Reduction&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Sensors&lt;/li&gt;
+&lt;li&gt;Material and Manufacturing&lt;/li&gt;
+&lt;li&gt;Algorithms and computation power&lt;/li&gt;
+&lt;li&gt;Actuators&lt;/li&gt;
+&lt;li&gt;Controllers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;sensors&#34;&gt;Sensors&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Spot features a mapping, localization, and autonomous traverse system collectively known as GraphNav. GraphNav uses sensor data to create waypoints, which are places in the real world it can travel to. Each waypoint has an associated snapshot of feature data from its location. This data allows the robot to track its position as it moves from waypoint to waypoint and correct its path.&lt;/li&gt;
+&lt;li&gt;Spot uses 5 Intel Realsense cameras’ 360 degree perception to map surrounding terrain and avoid obstacles dynamically.&lt;/li&gt;
+&lt;li&gt;Robots like Anymal on the other hand, use a lidar and and a monocular camera mounted on a 2dof arm to achieve a similar performance. The lidar is used for mapping and gathering 3d point cloud data whereas the camera is used for object detection whereas Cheetah, developed by MIT only uses a forward facing stereo camera for obstacle detection and avoidance.&lt;/li&gt;
+&lt;li&gt;Based on the use of sensor data from by GraphNav, we could potentially replace the 5 Intel Realsense cameras with a system like Anymal. The lidar can be used to create maps and a stereo camera can be mounted on a 2dof arm instead of a monocular camera. At every waypoint, the stereo camera can be rotated to capture multiple images at diﬀerent orientations to cover its complete surroundings. Using this system, the quadruped would be able to achieve similar performance while reducing the cost of sensors to half.&lt;/li&gt;
+&lt;li&gt;Also, the Intel Realsense cameras are not optimum for working in outdoor environments, while a zed camera does not have such a limitation. Hence using a lidar with a zed camera mounted on a gimbal or a 2dof arm can provide similar if not better performance at a lower price.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;actuators&#34;&gt;Actuators&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Spot has 2 actuators in each hip, and one actuator in each knee. This creates the following degrees of freedom and limits on each axis:
+&lt;ul&gt;
+&lt;li&gt;12 DOFs&lt;/li&gt;
+&lt;li&gt;Hip Joint X-axis : +/- 45 degrees from vertical (45 degrees of internal and external rotation from vertical)&lt;/li&gt;
+&lt;li&gt;Hip Joint Y-axis : +/- 91 degrees with 50 degree bias from vertical (ﬂexion/extension)&lt;/li&gt;
+&lt;li&gt;Knee: +/- 14-160 degrees from straight (ﬂexion/extension range from 14 to 160 degrees)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SpotMini quadruped robots are driven by battery-motor. For the hip and shoulder joint, Spot Mini uses Brushless DC Motors with harmonic gear, cycloidal, and or planetary gear reduction. The speed from the BLDC gets turned into torque with almost no backdrive. The leg has a linear actuator to act on the cantilever knee. Since the range of motion of the knee joint is pretty small, it
+can be torque, fast, and low inertia.&lt;/li&gt;
+&lt;li&gt;In contrast, the prototype of Spot used a battery-motor-hydraulic pump-electric servo hydraulic cylinder.&lt;/li&gt;
+&lt;li&gt;Laikago, a chinese quadruped robot also has a model like Spot and uses Unitree brushless dc motors for actuation.&lt;/li&gt;
+&lt;li&gt;MIT cheetah uses custom modular, low-gear ratio, backdriveable actuators with integrated electronics and high-bandwidth torque control.&lt;/li&gt;
+&lt;li&gt;Anymal uses a 12 electric series elastic actuators and hollow-shaft for maximal range of motion. Mjbots quad uses 12 qdd100 quasi direct drive actuators for its motion.&lt;/li&gt;
+&lt;li&gt;These are the alternates for the actuators that Spot currently uses. The qdd100 actuators used by MJbots Quad is cheaper than most of the competition on the market but commenting exactly on the price will not be possible as the exact cost of the custom actuators of Spot is not known.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;materials-and-manufacturing&#34;&gt;Materials and Manufacturing&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;The exact materials used in Spot are not currently known to us but looking at other quadrupeds, Spot is either made of aluminium 6061 series, titanium based alloys, carbon ﬁber, ﬁberglass or a combination of these.&lt;/li&gt;
+&lt;li&gt;Looking at the competition, Unitree Laikago is made of Carbon ﬁber, aluminum and 3D-printed parts.
+MIT Cheetah is made using Aluminum with plastic protectors used wherever needed.&lt;/li&gt;
+&lt;li&gt;Anymal is has a carbon ﬁber and aluminum body with foam protectors and some custom 3D-printed parts.&lt;/li&gt;
+&lt;li&gt;Spot has a very eﬃcient design through which wastage of materials is minimised. Therefore, the cost due to materials doesn’t signiﬁcantly change irrespective of the materials used. Still, there are two ways to reduce cost:
+&lt;ul&gt;
+&lt;li&gt;One is using cheaper materials like Steel or Iron which is not viable as these are optimal due to their weight and inability to handle high stress.&lt;/li&gt;
+&lt;li&gt;The second and more practical approach is using Recycled Aluminium. Recycled aluminium is almost as good as normal high grade aluminium and comes at a lower price and this price diﬀerence will become more noticeable when Spot starts getting mass produced.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hence, the best way of reducing the cost materials used in Spot is using Recycled Aluminium instead of normal Aluminium.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;computation&#34;&gt;Computation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Spot uses a Custom control and computing system developed by boston dynamics as it on board computer. Additional compute module can be mounted on top using Spot’s 2 payload ports and the additional compute module developed by boston dynamics costs $4,000.&lt;/li&gt;
+&lt;li&gt;Assuming the cost of the on board computer to be close to the additional compute module, the price of the on board computer can be estimated to about $4000, which is enormous and holds the greatest potential for cost-reducing.&lt;/li&gt;
+&lt;li&gt;As the major use of Spot is industrial, it can make do with a processing power which is suﬃcient to run GraphNav. GraphNav is the system Spot features for mapping, localization, and autonomous
+traversal.&lt;/li&gt;
+&lt;li&gt;As for its competition, only Anymal uses algorithms with complexity close to GraphNav and it uses three Intel i7 dual-core processors. One processor for real-time locomotion control, one processor for navigation, and one processor for task-speciﬁc application software (e.g. inspection).&lt;/li&gt;
+&lt;li&gt;Other quadrupeds like Cheetah or MJbot’s quad don’t use complex algorithms and only need computation for basic obstacle avoidance or motion control, and hence, their on board computers cannot potentially replace the existing ones on Spot.&lt;/li&gt;
+&lt;li&gt;Another way to Reduce the reduce the cost of on board computers is to use computationally simpler algorithms that can perform similar to GraphNav and could run on NVIDIA Jetson TX2 or Xavier NX.&lt;/li&gt;
+&lt;li&gt;Hence using multiple processors like Anymal is still extremely cheaper than using a custom $4,000 computer system. The total cost of buying 3 Intel, top of the line, 11th gen i7 processors is still less than $2,000 and hence this can enormously reduce the cost of Spot.&lt;/li&gt;
+&lt;li&gt;At the same time, if algorithms are made simple enough to run on a Nvidia Jetson TX2, the costs will further drop to less than $1000.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;some-intriguing-aspects-of-spot&#34;&gt;Some Intriguing aspects of Spot:&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Stability and Control&lt;/li&gt;
+&lt;li&gt;ROS Integration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;stability-and-control&#34;&gt;Stability and Control&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Boston Dynamics uses legged locomotion theory (like Zero Moment Point (ZMP)) and predictive/optimal control (This is a speculation and does not come from a published source).
+&lt;ul&gt;
+&lt;li&gt;This control theory uses a robot&amp;rsquo;s mathematical model to estimate the robot&amp;rsquo;s optimal behaviour at every timestep.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s computationally expensive compared to other control approaches but would enable the robot to behave in complex environments eﬀectively.&lt;/li&gt;
+&lt;li&gt;It also uses state estimation and localization using the landmarks/observations using a Kalman ﬁlter.&lt;/li&gt;
+&lt;li&gt;Since the robot has been designed and made, its model is known and may also be used.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;So, in short, Boston Dynamics built a library of possible motions (jump, backﬂip, step, etc.)
+&lt;ul&gt;
+&lt;li&gt;They follow those trajectories online using the complete model, adapting them for the situation and adding disturbance rejection through Model Predictive Controller.&lt;/li&gt;
+&lt;li&gt;The algorithm switches between diﬀerent models depending on which part of the conﬁguration space the robot is in.&lt;/li&gt;
+&lt;li&gt;All of it relies on having a good model of dynamics for the robots, which is engineered by BD, rather than using machine learning for it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The control scheme is straightforward. Since Spot is a dynamically controlled robot, we cannot use position controllers for it.
+&lt;ul&gt;
+&lt;li&gt;It needs actuators that are force-controlled and can be back driven.&lt;/li&gt;
+&lt;li&gt;The controller tries to keep all the torques such that they add up to zero (or some setpoint number).&lt;/li&gt;
+&lt;li&gt;This means that when the centre of gravity is displaced from the centerline (either because the robot is running or tripping), then the force the leg actuators needed to be applied to arrest (or accelerate) the motion can be calculated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;spot-and-robot-operating-system&#34;&gt;Spot and Robot Operating System:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Clearpath Robotics has developed a well maintained documentation and tutorials on how to use its ROS package with Spot.&lt;/li&gt;
+&lt;li&gt;The user can easily control the robot using ROS drivers, while simultaneously accessing any onboard sensor data streams, such as odometry, images, point cloud map from any of the ﬁve realsense cameras.&lt;/li&gt;
+&lt;li&gt;Payload data can also be integrated with it.&lt;/li&gt;
+&lt;li&gt;ROS allows the user to integrate additional sensors like IMU, cameras, radar, lidars, manipulators, or even custom payloads.&lt;/li&gt;
+&lt;li&gt;It is however seen that Boston Dynamics doesn’t provide ROS support on its own, as ROS cannot be used for hard real-time systems application, which all torque controlled robots are.&lt;/li&gt;
+&lt;li&gt;Real-time systems must guarantee response within speciﬁed time constraints. Thus, Boston Dynamics do not use it for control interfaces.&lt;/li&gt;
+&lt;li&gt;Clearpath Robotics’ ROS drivers for Spot are majorly used for Computer Vision applications and Mapping, as ROS has great integration with top-notch perception libraries like OpenCV and PCL.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;future-work&#34;&gt;Future work&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Explore some more domains which can potentially reduce the cost of Spot
+&lt;ul&gt;
+&lt;li&gt;eg. Battery, Algorithms etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Compare Spot with more quadrupeds like Unitree Robotics’ A1, which is available for around $10,000 as compared to Spot’s $75,000.&lt;/li&gt;
+&lt;li&gt;Contact universities and people currently studying about or having experience in working with Spot to study their research.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;thank-you&#34;&gt;Thank you!&lt;/h2&gt;
+&lt;h2 id=&#34;questions&#34;&gt;Questions?&lt;/h2&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
     <item>
       <title>Slides</title>
       <link>https://Srujan-D.github.io/slides/example/</link>

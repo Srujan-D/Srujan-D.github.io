@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  
+  
+
+  
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Wowchemy 5.3.0 for Hugo">
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu7757f03c3b8213da4996ade98b280256_309033_192x192_fill_lanczos_center_3.png">
+
+  <link rel="canonical" href="https://Srujan-D.github.io/slides/spot/">
+
+  <title>Spot | Srujan Deolasee</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" id="highlight-theme">
+
+  
+  
+  <link rel="stylesheet" href="/css/reveal_custom.min.css">
+</head>
+<body>
+
+  
+<div class="reveal">
+  <div class="slides">
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    <section>
+    
+      <h1 id="studies-and-advances-in-development-of-spot-by-boston-dynamics">Studies and Advances in development of Spot by Boston Dynamics</h1>
+<p>Team:</p>
+<ol>
+<li>Srujan Deolasee (2019A7PS1139P)</li>
+<li>Tanishq Duhan (2019B5A70636P)</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="introduction">Introduction</h2>
+<ol>
+<li>Spot is a Quadruped robot developed by Boston Dynamics and is currently one of the most famous in
+the market. It is highly customizable - both with respect to hardware and software. Recently we saw that Spot robot came with a manipulator on top of it. It can operate in temperature ranges from -20 to 45 degree C.</li>
+<li>Due to these reasons, Spot currently has applications in various industries and is further used by different research institutes and helping them conduct breakthrough research in the ﬁeld of robotics.</li>
+<li>As discussed above, Spot has very few to no limitations, and Boston Dynamics is working effortlessly to improve the already near perfect Robot-dog.</li>
+<li>The only big limitation Spot has is its price. Its current price is of an enormous $75,000.</li>
+<li>Our aim is to discuss various methods of reducing the price of Spot without signiﬁcantly decreasing it performance capabilities by suggesting replacements of current parts and comparing Spot ot its competitors like Cheetah or Anymal.</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="existing-technology-and-opportunities-for-cost-reduction">Existing Technology and Opportunities for Cost Reduction</h2>
+<ol>
+<li>Sensors</li>
+<li>Material and Manufacturing</li>
+<li>Algorithms and computation power</li>
+<li>Actuators</li>
+<li>Controllers</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="sensors">Sensors</h2>
+<ol>
+<li>Spot features a mapping, localization, and autonomous traverse system collectively known as GraphNav. GraphNav uses sensor data to create waypoints, which are places in the real world it can travel to. Each waypoint has an associated snapshot of feature data from its location. This data allows the robot to track its position as it moves from waypoint to waypoint and correct its path.</li>
+<li>Spot uses 5 Intel Realsense cameras’ 360 degree perception to map surrounding terrain and avoid obstacles dynamically.</li>
+<li>Robots like Anymal on the other hand, use a lidar and and a monocular camera mounted on a 2dof arm to achieve a similar performance. The lidar is used for mapping and gathering 3d point cloud data whereas the camera is used for object detection whereas Cheetah, developed by MIT only uses a forward facing stereo camera for obstacle detection and avoidance.</li>
+<li>Based on the use of sensor data from by GraphNav, we could potentially replace the 5 Intel Realsense cameras with a system like Anymal. The lidar can be used to create maps and a stereo camera can be mounted on a 2dof arm instead of a monocular camera. At every waypoint, the stereo camera can be rotated to capture multiple images at diﬀerent orientations to cover its complete surroundings. Using this system, the quadruped would be able to achieve similar performance while reducing the cost of sensors to half.</li>
+<li>Also, the Intel Realsense cameras are not optimum for working in outdoor environments, while a zed camera does not have such a limitation. Hence using a lidar with a zed camera mounted on a gimbal or a 2dof arm can provide similar if not better performance at a lower price.</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="actuators">Actuators</h2>
+<ol>
+<li>Spot has 2 actuators in each hip, and one actuator in each knee. This creates the following degrees of freedom and limits on each axis:
+<ul>
+<li>12 DOFs</li>
+<li>Hip Joint X-axis : +/- 45 degrees from vertical (45 degrees of internal and external rotation from vertical)</li>
+<li>Hip Joint Y-axis : +/- 91 degrees with 50 degree bias from vertical (ﬂexion/extension)</li>
+<li>Knee: +/- 14-160 degrees from straight (ﬂexion/extension range from 14 to 160 degrees)</li>
+</ul>
+</li>
+<li>SpotMini quadruped robots are driven by battery-motor. For the hip and shoulder joint, Spot Mini uses Brushless DC Motors with harmonic gear, cycloidal, and or planetary gear reduction. The speed from the BLDC gets turned into torque with almost no backdrive. The leg has a linear actuator to act on the cantilever knee. Since the range of motion of the knee joint is pretty small, it
+can be torque, fast, and low inertia.</li>
+<li>In contrast, the prototype of Spot used a battery-motor-hydraulic pump-electric servo hydraulic cylinder.</li>
+<li>Laikago, a chinese quadruped robot also has a model like Spot and uses Unitree brushless dc motors for actuation.</li>
+<li>MIT cheetah uses custom modular, low-gear ratio, backdriveable actuators with integrated electronics and high-bandwidth torque control.</li>
+<li>Anymal uses a 12 electric series elastic actuators and hollow-shaft for maximal range of motion. Mjbots quad uses 12 qdd100 quasi direct drive actuators for its motion.</li>
+<li>These are the alternates for the actuators that Spot currently uses. The qdd100 actuators used by MJbots Quad is cheaper than most of the competition on the market but commenting exactly on the price will not be possible as the exact cost of the custom actuators of Spot is not known.</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="materials-and-manufacturing">Materials and Manufacturing</h2>
+<ol>
+<li>The exact materials used in Spot are not currently known to us but looking at other quadrupeds, Spot is either made of aluminium 6061 series, titanium based alloys, carbon ﬁber, ﬁberglass or a combination of these.</li>
+<li>Looking at the competition, Unitree Laikago is made of Carbon ﬁber, aluminum and 3D-printed parts.
+MIT Cheetah is made using Aluminum with plastic protectors used wherever needed.</li>
+<li>Anymal is has a carbon ﬁber and aluminum body with foam protectors and some custom 3D-printed parts.</li>
+<li>Spot has a very eﬃcient design through which wastage of materials is minimised. Therefore, the cost due to materials doesn’t signiﬁcantly change irrespective of the materials used. Still, there are two ways to reduce cost:
+<ul>
+<li>One is using cheaper materials like Steel or Iron which is not viable as these are optimal due to their weight and inability to handle high stress.</li>
+<li>The second and more practical approach is using Recycled Aluminium. Recycled aluminium is almost as good as normal high grade aluminium and comes at a lower price and this price diﬀerence will become more noticeable when Spot starts getting mass produced.</li>
+</ul>
+</li>
+<li>Hence, the best way of reducing the cost materials used in Spot is using Recycled Aluminium instead of normal Aluminium.</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="computation">Computation</h2>
+<ol>
+<li>Spot uses a Custom control and computing system developed by boston dynamics as it on board computer. Additional compute module can be mounted on top using Spot’s 2 payload ports and the additional compute module developed by boston dynamics costs $4,000.</li>
+<li>Assuming the cost of the on board computer to be close to the additional compute module, the price of the on board computer can be estimated to about $4000, which is enormous and holds the greatest potential for cost-reducing.</li>
+<li>As the major use of Spot is industrial, it can make do with a processing power which is suﬃcient to run GraphNav. GraphNav is the system Spot features for mapping, localization, and autonomous
+traversal.</li>
+<li>As for its competition, only Anymal uses algorithms with complexity close to GraphNav and it uses three Intel i7 dual-core processors. One processor for real-time locomotion control, one processor for navigation, and one processor for task-speciﬁc application software (e.g. inspection).</li>
+<li>Other quadrupeds like Cheetah or MJbot’s quad don’t use complex algorithms and only need computation for basic obstacle avoidance or motion control, and hence, their on board computers cannot potentially replace the existing ones on Spot.</li>
+<li>Another way to Reduce the reduce the cost of on board computers is to use computationally simpler algorithms that can perform similar to GraphNav and could run on NVIDIA Jetson TX2 or Xavier NX.</li>
+<li>Hence using multiple processors like Anymal is still extremely cheaper than using a custom $4,000 computer system. The total cost of buying 3 Intel, top of the line, 11th gen i7 processors is still less than $2,000 and hence this can enormously reduce the cost of Spot.</li>
+<li>At the same time, if algorithms are made simple enough to run on a Nvidia Jetson TX2, the costs will further drop to less than $1000.</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h1 id="some-intriguing-aspects-of-spot">Some Intriguing aspects of Spot:</h1>
+<ol>
+<li>Stability and Control</li>
+<li>ROS Integration</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="stability-and-control">Stability and Control</h2>
+<ol>
+<li>Boston Dynamics uses legged locomotion theory (like Zero Moment Point (ZMP)) and predictive/optimal control (This is a speculation and does not come from a published source).
+<ul>
+<li>This control theory uses a robot&rsquo;s mathematical model to estimate the robot&rsquo;s optimal behaviour at every timestep.</li>
+<li>It&rsquo;s computationally expensive compared to other control approaches but would enable the robot to behave in complex environments eﬀectively.</li>
+<li>It also uses state estimation and localization using the landmarks/observations using a Kalman ﬁlter.</li>
+<li>Since the robot has been designed and made, its model is known and may also be used.</li>
+</ul>
+</li>
+<li>So, in short, Boston Dynamics built a library of possible motions (jump, backﬂip, step, etc.)
+<ul>
+<li>They follow those trajectories online using the complete model, adapting them for the situation and adding disturbance rejection through Model Predictive Controller.</li>
+<li>The algorithm switches between diﬀerent models depending on which part of the conﬁguration space the robot is in.</li>
+<li>All of it relies on having a good model of dynamics for the robots, which is engineered by BD, rather than using machine learning for it.</li>
+</ul>
+</li>
+<li>The control scheme is straightforward. Since Spot is a dynamically controlled robot, we cannot use position controllers for it.
+<ul>
+<li>It needs actuators that are force-controlled and can be back driven.</li>
+<li>The controller tries to keep all the torques such that they add up to zero (or some setpoint number).</li>
+<li>This means that when the centre of gravity is displaced from the centerline (either because the robot is running or tripping), then the force the leg actuators needed to be applied to arrest (or accelerate) the motion can be calculated.</li>
+</ul>
+</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="spot-and-robot-operating-system">Spot and Robot Operating System:</h2>
+<ol>
+<li>Clearpath Robotics has developed a well maintained documentation and tutorials on how to use its ROS package with Spot.</li>
+<li>The user can easily control the robot using ROS drivers, while simultaneously accessing any onboard sensor data streams, such as odometry, images, point cloud map from any of the ﬁve realsense cameras.</li>
+<li>Payload data can also be integrated with it.</li>
+<li>ROS allows the user to integrate additional sensors like IMU, cameras, radar, lidars, manipulators, or even custom payloads.</li>
+<li>It is however seen that Boston Dynamics doesn’t provide ROS support on its own, as ROS cannot be used for hard real-time systems application, which all torque controlled robots are.</li>
+<li>Real-time systems must guarantee response within speciﬁed time constraints. Thus, Boston Dynamics do not use it for control interfaces.</li>
+<li>Clearpath Robotics’ ROS drivers for Spot are majorly used for Computer Vision applications and Mapping, as ROS has great integration with top-notch perception libraries like OpenCV and PCL.</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="future-work">Future work</h2>
+<ol>
+<li>Explore some more domains which can potentially reduce the cost of Spot
+<ul>
+<li>eg. Battery, Algorithms etc.</li>
+</ul>
+</li>
+<li>Compare Spot with more quadrupeds like Unitree Robotics’ A1, which is available for around $10,000 as compared to Spot’s $75,000.</li>
+<li>Contact universities and people currently studying about or having experience in working with Spot to study their research.</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="thank-you">Thank you!</h2>
+<h2 id="questions">Questions?</h2>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+    </section>
+    
+
+    
+    
+  </div>
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js" integrity="sha512-Xu/cezKABTI81MGnaBm64vdiS7XkttHeYGOgr2Mdga0bTplSBGongLq2lhK2HwL79wefKM0u4uTCLD0ha1sRzQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js" integrity="sha512-eZZqO4ECmVvGhCt+6VZ7ian2bCu4S6yrjSFH9fXLY1zTokpAWsxAxQwM4x6+7G+G4ha5tFIe0jY0XjpBUqS49Q==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js" integrity="sha512-NA5UCab7xDKQPXGsmIp8iEuId5BAKGPiqHZsZQcBuySfp1n3dZrwBDKpPNL23Db5upay1nULxU14JV1ggFOD2A==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js" integrity="sha512-FYeeQscKqibmYKr0+nE2+fN5prBsFwgjsBVwkrA88O6mN2+ai6EvRkSi6txuhXlWsyK1MUfoV+94+q6HLouJSQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/search/search.min.js" integrity="sha512-2yh3Y2gEdboEnZb9d0QZP05N3e0jTkcjhbG9xYL97mbnZ53IXzF5R2TCTmSrtuspDyJ5FWBSh+8izjiGjVdLWw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js" integrity="sha512-FUzQmRJDLL111zqJg/vN1YzQFQtZNWfBH2VaOiv30dXRXgaTRn3F/Ibda92klSAVjfz3Q9UqS88R4RF4Ip01fQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/zoom/zoom.min.js" integrity="sha512-zPYOPjR7Hg9BPUYkfNlvVtrC37QlYwq/7mI42VTuXKTcNBp7QvMfuqUTMesOf74OrZ3AEdxJGndGSrJG9O2j5Q==" crossorigin="anonymous"></script>
+
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/plugin.js" integrity="sha256-M6JwAjnRAWmi+sbXURR/yAhWZKYhAw7YXnnLvIxrdGs=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/menu.js" integrity="sha256-l14dklFcW5mWar6w/9KaW0fWVerf3mYr7Wt0+rXzFAA=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/menu.css" integrity="sha256-0fU8HKLaTjgzfaV9CgSqbsN8ilA3zo6zK1M6rlgULd8=" crossorigin="anonymous">
+  
+
+  
+
+  
+  <script src="/js/wowchemy-slides.js"></script>
+
+</body>
+</html>
